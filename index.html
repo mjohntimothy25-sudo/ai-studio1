@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Model Hub — Learn, Explore & Build with AI | JohnAI Studio</title>
+  <meta name="description" content="Explore AI Models, RAG Systems, AI Agents, Multimodal AI, System Architectures, Prompt Engineering, Computer Vision, Speech AI, and Real-World Projects.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="AI Model Hub Home">
+        <span class="logo-icon">✨</span>
+        <span class="logo-text">AI Model <span class="highlight">Hub</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <button class="nav-item dropdown-toggle" id="ai-hub-dropdown-btn">
+            <span>AI Explorer ▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#ai-models-explorer" class="dropdown-link">🤖 AI Model Explorer (20 Cat)</a>
+            <a href="#important-models" class="dropdown-link">⭐ Popular Models Spotlight</a>
+            <a href="#rag-section" class="dropdown-link">📚 RAG Architecture</a>
+            <a href="#rag-playground" class="dropdown-link">🎮 Interactive RAG Playground</a>
+            <a href="#ai-architectures-section" class="dropdown-link">🏗️ AI System Architectures</a>
+            <a href="#ai-agents-section" class="dropdown-link">🤖 AI Agents & Workflows</a>
+            <a href="#prompt-engineering-masterclass" class="dropdown-link">🎨 Prompt Engineering</a>
+            <a href="#computer-vision-section" class="dropdown-link">👁️ Computer Vision</a>
+            <a href="#speech-ai-section" class="dropdown-link">🎙️ Speech AI Pipeline</a>
+            <a href="#model-comparison-section" class="dropdown-link">📊 Model Comparison Matrix</a>
+            <a href="#model-wizard-section" class="dropdown-link">🧙 Model Selection Wizard</a>
+            <a href="#real-world-projects" class="dropdown-link">🚀 12 Real-World Projects</a>
+            <a href="#learning-roadmap" class="dropdown-link">🗺️ AI Learning Roadmap</a>
+          </div>
+        </div>
+
+        <a href="#ai-models-explorer" class="nav-item">AI Models</a>
+        <a href="#rag-section" class="nav-item">RAG</a>
+        <a href="#ai-agents-section" class="nav-item">AI Agents</a>
+        <a href="#ai-architectures-section" class="nav-item">Architectures</a>
+        <a href="#prompt-engineering-masterclass" class="nav-item">Prompting</a>
+        <a href="#interactive-lab" class="nav-item lab-link">
+          <span>Interactive Lab</span>
+          <span class="nav-badge" id="nav-lab-count">0/5</span>
+        </a>
+        <a href="#real-world-projects" class="nav-item">Projects</a>
+        <a href="#learning-roadmap" class="nav-item">Roadmap</a>
+        <a href="#quiz-section" class="nav-item">Quiz</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Progress Ring Badge -->
+        <div class="lab-progress-widget" title="Lab Progress" id="progress-widget" tabIndex="0">
+          <svg class="progress-ring" width="36" height="36">
+            <circle class="progress-ring-bg" stroke="currentColor" stroke-width="3" fill="transparent" r="14" cx="18" cy="18"/>
+            <circle class="progress-ring-circle" id="global-progress-circle" stroke="currentColor" stroke-width="3" fill="transparent" r="14" cx="18" cy="18"/>
+          </svg>
+          <span class="progress-percent" id="global-progress-text">0%</span>
+        </div>
+
+        <!-- Voice AI Assistant Nav Button -->
+        <button id="nav-voice-btn" class="icon-btn voice-nav-btn" aria-label="Open Voice AI Assistant" title="Open AI Voice Chatbot (Ctrl+Shift+V)">
+          <span class="voice-nav-mic">🎙️</span>
+          <span class="nav-voice-label">Voice AI</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. HOMEPAGE / HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-glow"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="pulse-dot"></span> Professional AI Developer & Learning Platform
+          </div>
+          <h1 class="hero-title">AI Model Hub — <span class="gradient-text">Learn, Explore & Build with AI</span></h1>
+          <p class="hero-subtitle">
+            Explore AI Models, Understand Their Uses, and Build Real-World AI Systems — from RAG & AI Agents to Multimodal Vision, Speech AI & JARVIS Architectures.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#ai-models-explorer" class="btn btn-primary btn-lg">
+              <span>Explore AI Models</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#rag-section" class="btn btn-secondary btn-lg">
+              <span>Learn RAG</span>
+            </a>
+            <a href="#real-world-projects" class="btn btn-outline btn-lg">
+              <span>Build AI Systems</span>
+            </a>
+            <a href="#ai-architectures-section" class="btn btn-outline btn-lg">
+              <span>AI Architecture</span>
+            </a>
+            <a href="#prompt-engineering-masterclass" class="btn btn-secondary btn-lg">
+              <span>Prompt Engineering</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">AI Model Categories</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Popular AI Models</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Real-World Applications</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">AI Architectures & RAG</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card Preview Teaser -->
+        <div class="hero-teaser">
+          <div class="teaser-card glass-panel">
+            <div class="teaser-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="teaser-title">AI System Flow & Token Engine</span>
+            </div>
+            <div class="teaser-body">
+              <div class="preview-prompt">
+                <span class="prompt-label">Enterprise RAG & Agent Pipeline:</span>
+                <p class="prompt-text">"User Query ➔ Vector DB ➔ Reranker ➔ LLM ➔ Citation Response"</p>
+              </div>
+              <div class="preview-output">
+                <span class="output-label">System Performance & Precision:</span>
+                <div class="word-bar-item">
+                  <span class="w-label">Retrieval</span>
+                  <div class="w-bar-wrap"><div class="w-bar" style="width: 96%;"></div></div>
+                  <span class="w-val">96%</span>
+                </div>
+                <div class="word-bar-item">
+                  <span class="w-label">Reranking</span>
+                  <div class="w-bar-wrap"><div class="w-bar" style="width: 94%;"></div></div>
+                  <span class="w-val">94%</span>
+                </div>
+                <div class="word-bar-item">
+                  <span class="w-label">Grounding</span>
+                  <div class="w-bar-wrap"><div class="w-bar" style="width: 98%;"></div></div>
+                  <span class="w-val">98%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. AI MODEL EXPLORER SECTION (20 CATEGORIES & 100+ MODELS) -->
+    <section id="ai-models-explorer" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Interactive Catalog</span>
+          <h2 class="section-title">AI Model Explorer</h2>
+          <p class="section-desc">Search, filter, and inspect 20 categories of AI models — from LLMs and Embeddings to Vision-Language, Speech, Pose Estimation, and Graph Neural Networks.</p>
+        </div>
+
+        <!-- Category Scroll Pills -->
+        <div class="category-scroll-wrapper">
+          <div class="category-pills-container" id="category-pills">
+            <!-- Dynamically populated via JS from AI_MODEL_CATEGORIES -->
+          </div>
+        </div>
+
+        <!-- Search & Advanced Filters Bar -->
+        <div class="filter-controls-bar glass-panel margin-top-md">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="model-search-input" class="form-control" placeholder="Search models by name, developer, capability, or use case (e.g. Qwen, Llama, RAG, YOLO, Whisper)...">
+          </div>
+
+          <div class="select-filters-row margin-top-sm">
+            <div class="select-group">
+              <label for="filter-availability">Availability:</label>
+              <select id="filter-availability" class="form-control">
+                <option value="all">All (Local & API)</option>
+                <option value="Local">Local Execution</option>
+                <option value="API">API Access Only</option>
+                <option value="Local & API">Local & API</option>
+              </select>
+            </div>
+
+            <div class="select-group">
+              <label for="filter-license">License Status:</label>
+              <select id="filter-license" class="form-control">
+                <option value="all">All Licenses</option>
+                <option value="Open Source">Open Source / Open Weights</option>
+                <option value="Commercial">Commercial API</option>
+              </select>
+            </div>
+
+            <div class="select-group">
+              <label for="filter-difficulty">Difficulty Level:</label>
+              <select id="filter-difficulty" class="form-control">
+                <option value="all">All Levels</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Models Cards Grid -->
+        <div class="models-grid margin-top-lg" id="models-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. IMPORTANT AI MODELS SPOTLIGHT -->
+    <section id="important-models" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Industry Standard Tools</span>
+          <h2 class="section-title">Important AI Models Spotlight</h2>
+          <p class="section-desc">Detailed breakdown of popular state-of-the-art models used by developers, researchers, and tech enterprises worldwide.</p>
+        </div>
+
+        <div class="spotlight-tabs" id="spotlight-tabs">
+          <button class="tab-btn active" data-tab="spotlight-llm">💬 LLMs</button>
+          <button class="tab-btn" data-tab="spotlight-embeddings">🔢 Embeddings</button>
+          <button class="tab-btn" data-tab="spotlight-vision">👁️ Vision & Multimodal</button>
+          <button class="tab-btn" data-tab="spotlight-cv">📦 Computer Vision</button>
+          <button class="tab-btn" data-tab="spotlight-speech">🎙️ Speech AI</button>
+          <button class="tab-btn" data-tab="spotlight-imagegen">🎨 Image Gen</button>
+        </div>
+
+        <div class="spotlight-content margin-top-lg" id="spotlight-content-box">
+          <!-- Content dynamically rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. RAG SECTION (RETRIEVAL-AUGMENTED GENERATION) -->
+    <section id="rag-section" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Knowledge Grounding System</span>
+          <h2 class="section-title">RAG — Retrieval-Augmented Generation</h2>
+          <p class="section-desc">
+            RAG allows an AI system to retrieve relevant information from external knowledge sources (PDFs, SQL databases, internal wikis) before generating an answer — eliminating hallucinations and keeping responses factual.
+          </p>
+        </div>
+
+        <!-- RAG Concept & Diagram Banner -->
+        <div class="rag-banner glass-panel">
+          <div class="rag-diagram-wrap text-center">
+            <h3>Complete RAG System Architecture</h3>
+            <p class="text-muted margin-bottom-md">Interactive Flow: Document Ingestion ➔ Vector Storage ➔ Retrieval ➔ Reranking ➔ Grounded LLM Response with Citations</p>
+            <img src="images/rag_architecture.jpg" alt="RAG Architecture Diagram" class="concept-image-lg rounded-lg shadow-lg">
+          </div>
+
+          <div class="rag-flow-pipeline margin-top-xl">
+            <h4 class="text-center margin-bottom-md">Step-by-Step Architecture Component Flow:</h4>
+            <div class="pipeline-steps-grid">
+              <div class="p-step">
+                <span class="p-num">1</span>
+                <h5>User Question</h5>
+                <p>Natural language query entered into system.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">2</span>
+                <h5>Query Processing</h5>
+                <p>Cleaning, intent classification, and query expansion.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">3</span>
+                <h5>Embedding Model</h5>
+                <p>Converts query string into 1024-dim dense vector.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">4</span>
+                <h5>Vector Database</h5>
+                <p>HNSW cosine similarity index lookup.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">5</span>
+                <h5>Retriever</h5>
+                <p>Fetches top-K candidate passage chunks.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">6</span>
+                <h5>Reranker</h5>
+                <p>Cross-encoder re-scores relevance scores.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">7</span>
+                <h5>Relevant Documents</h5>
+                <p>Top candidate passages selected for context.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">8</span>
+                <h5>LLM Generator</h5>
+                <p>Synthesizes answer strictly grounded in context.</p>
+              </div>
+              <div class="p-step">
+                <span class="p-num">9</span>
+                <h5>Final Answer</h5>
+                <p>Delivered to user with exact line citations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 Component Cards -->
+        <h3 class="text-center margin-top-xl margin-bottom-md">Detailed RAG Pipeline Subsystems</h3>
+        <div class="rag-components-grid">
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">📄</span>
+            <h4>1. Document Ingestion</h4>
+            <p>Gathering files (PDF, DOCX, Markdown, HTML, SQL) from cloud buckets, local drives, or web crawlers.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🔍</span>
+            <h4>2. Document Parsing</h4>
+            <p>Extracting raw text, table structures, image diagrams, and metadata using OCR engines (GOT-OCR 2.0, PyMuPDF).</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">✂️</span>
+            <h4>3. Chunking Strategies</h4>
+            <p>Splitting documents into optimal byte sizes (Fixed 512 tokens, Semantic paragraph bounds, Parent-Child Hierarchical).</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🔢</span>
+            <h4>4. Text Embeddings</h4>
+            <p>Translating textual chunks into mathematical vector points using models like BGE-M3, E5, and Nomic Embed.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🗄️</span>
+            <h4>5. Vector Storage</h4>
+            <p>Storing embeddings in specialized vector DBs (ChromaDB, FAISS, Qdrant, Pinecone, Weaviate, Milvus) indexed with HNSW algorithms.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🎯</span>
+            <h4>6. Retrieval Techniques</h4>
+            <p>Searching vectors via Cosine Distance, Dot Product, BM25 Lexical Keyword Search, or Hybrid Dense+Sparse Search.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">📊</span>
+            <h4>7. Similarity Scoring</h4>
+            <p>Measuring geometric distance between query vector and chunk vectors to score top candidate matches.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">⚡</span>
+            <h4>8. Cross-Encoder Reranking</h4>
+            <p>Re-evaluating top 20 candidate chunks with a heavy cross-encoder (BGE Reranker v2, Cohere Rerank) to filter out false matches.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🧱</span>
+            <h4>9. Context Construction</h4>
+            <p>Injecting top reranked chunks into prompt templates while avoiding "lost-in-the-middle" context window degradation.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🧠</span>
+            <h4>10. Grounded Generation</h4>
+            <p>Prompting LLM (Claude, Qwen, Llama, GPT-4o) to answer strictly based on injected context blocks.</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🔗</span>
+            <h4>11. Source Citations</h4>
+            <p>Attaching exact document names, page numbers, and snippet links back to original files (e.g. [Policy.pdf, Page 4]).</p>
+          </div>
+          <div class="rag-comp-card glass-panel">
+            <span class="comp-icon">🛡️</span>
+            <h4>12. Hallucination Reduction</h4>
+            <p>Enforcing zero-shot fallback rules: "If answer is missing from context, state 'Information not found in provided knowledge base'."</p>
+          </div>
+        </div>
+
+        <!-- Vector Databases & Rerankers Showcase -->
+        <div class="vdb-showcase glass-panel margin-top-xl">
+          <h3 class="text-center margin-bottom-md">Vector Database & Reranker Technologies</h3>
+          <div class="vdb-grid">
+            <div class="vdb-card">
+              <h4>ChromaDB</h4>
+              <span class="vdb-tag">Open Source • Local</span>
+              <p>Lightweight Python/JS vector database that runs embedded in memory or local disk. Perfect for prototyping and local apps.</p>
+            </div>
+            <div class="vdb-card">
+              <h4>FAISS</h4>
+              <span class="vdb-tag">Meta Open Source • Ultra-Fast</span>
+              <p>Facebook AI Similarity Search library built in C++ for blazingly fast billion-scale GPU vector search.</p>
+            </div>
+            <div class="vdb-card">
+              <h4>Qdrant</h4>
+              <span class="vdb-tag">Rust • Cloud & Self-Hosted</span>
+              <p>Production vector search engine written in Rust with rich payload filtering, geo-search, and high concurrency.</p>
+            </div>
+            <div class="vdb-card">
+              <h4>Pinecone</h4>
+              <span class="vdb-tag">Managed Cloud API</span>
+              <p>Fully managed serverless vector database providing high availability, low latency, and zero infrastructure overhead.</p>
+            </div>
+            <div class="vdb-card">
+              <h4>Weaviate</h4>
+              <span class="vdb-tag">GraphQL & Vector Engine</span>
+              <p>Open-source vector database supporting hybrid BM25 search, multi-modal vectors, and custom module extensions.</p>
+            </div>
+            <div class="vdb-card">
+              <h4>Milvus</h4>
+              <span class="vdb-tag">Distributed Enterprise</span>
+              <p>Cloud-native vector database designed for enterprise cloud clusters with petabyte-scale vector storage capability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. RAG PLAYGROUND (INTERACTIVE SIMULATED DEMO) -->
+    <section id="rag-playground" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Live RAG Simulator</span>
+          <h2 class="section-title">Interactive RAG Playground</h2>
+          <p class="section-desc">Experience a live frontend simulation of a complete Retrieval-Augmented Generation pipeline. Watch documents turn into vectors, view similarity search scores, observe cross-encoder reranking, and see the final grounded answer with citations!</p>
+        </div>
+
+        <div class="rag-playground-grid glass-panel">
+          <!-- Left Panel: Knowledge Base -->
+          <div class="rag-play-col col-left">
+            <div class="col-header">
+              <span class="col-icon">📚</span>
+              <h4>1. Knowledge Base</h4>
+            </div>
+            <div class="preset-selector">
+              <label for="rag-preset-select">Load Preset Dataset:</label>
+              <select id="rag-preset-select" class="form-control">
+                <option value="university">University Attendance & Exam Policy</option>
+                <option value="medical">Hospital Patient Vitals Handbook</option>
+                <option value="technical">DevOps Kubernetes Deployment Guide</option>
+              </select>
+            </div>
+
+            <div class="doc-chunks-list" id="rag-doc-chunks-box">
+              <!-- Rendered dynamically via JS -->
+            </div>
+
+            <button id="rag-add-doc-btn" class="btn btn-secondary btn-sm margin-top-sm width-full">+ Add Custom Document Chunk</button>
+          </div>
+
+          <!-- Middle Panel: Retrieval & Reranking Process -->
+          <div class="rag-play-col col-middle">
+            <div class="col-header">
+              <span class="col-icon">⚡</span>
+              <h4>2. Retrieval & Reranking</h4>
+            </div>
+            
+            <div class="query-box">
+              <label for="rag-query-input">Enter User Question:</label>
+              <input type="text" id="rag-query-input" class="form-control" value="What is the minimum attendance requirement for final exams?">
+            </div>
+
+            <button id="rag-run-btn" class="btn btn-primary btn-sm margin-top-sm width-full">▶ Execute RAG Pipeline</button>
+
+            <div class="retrieval-steps-box margin-top-md" id="rag-process-visualizer">
+              <div class="step-log-item">
+                <span class="log-badge">QUERY</span>
+                <span class="log-text">Click "Execute RAG Pipeline" to watch vector search!</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Panel: Final LLM Answer with Citations -->
+          <div class="rag-play-col col-right">
+            <div class="col-header">
+              <span class="col-icon">🧠</span>
+              <h4>3. LLM Grounded Answer</h4>
+            </div>
+
+            <div class="llm-response-box" id="rag-llm-response-box">
+              <p class="placeholder-text">The generated answer with inline citations will appear here after executing the retrieval pipeline.</p>
+            </div>
+
+            <div class="citations-box margin-top-sm" id="rag-citations-box">
+              <span class="citations-title">Source Citations:</span>
+              <div id="rag-citations-list" class="citations-list">
+                <span class="text-muted text-sm">No citations yet.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. AI ARCHITECTURES SECTION -->
+    <section id="ai-architectures-section" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">System Design & Integration</span>
+          <h2 class="section-title">AI System Architectures</h2>
+          <p class="section-desc">Interactive topology diagrams explaining how AI models connect with vector databases, microphones, web search tools, and APIs in real-world systems.</p>
+        </div>
+
+        <div class="arch-selector-tabs" id="arch-selector-tabs">
+          <!-- Populated dynamically from AI_ARCHITECTURES_DATA -->
+        </div>
+
+        <div class="arch-display-card glass-panel margin-top-lg" id="arch-display-card">
+          <!-- Rendered dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. AI AGENT SECTION -->
+    <section id="ai-agents-section" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Autonomous Intelligence</span>
+          <h2 class="section-title">AI Agents & Multi-Agent Systems</h2>
+          <p class="section-desc">What is an AI Agent? Unlike basic chatbots that only output text, AI Agents perceive environments, formulate plans, call external tools (Web Search, Code Sandboxes, SQL DBs), and complete multi-step tasks autonomously.</p>
+        </div>
+
+        <!-- Agent Diagram Banner -->
+        <div class="agent-banner glass-panel">
+          <div class="agent-diagram-wrap text-center">
+            <h3>Autonomous AI Agent Loop</h3>
+            <p class="text-muted margin-bottom-md">Perception ➔ Short & Long Term Memory ➔ ReAct Planning ➔ Tool Calling (APIs/Search/Code) ➔ Execution ➔ Evaluation</p>
+            <img src="images/ai_agent_workflow.jpg" alt="AI Agent Workflow Diagram" class="concept-image-lg rounded-lg shadow-lg">
+          </div>
+        </div>
+
+        <!-- Concept Grid: Agent Capabilities -->
+        <div class="agent-grid margin-top-xl">
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">⚖️</span>
+            <h4>Agent vs. Chatbot</h4>
+            <p>Chatbots simply generate conversational text in one turn. Agents break down goals into sub-tasks, execute code, verify results, and auto-correct errors.</p>
+          </div>
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">🛠️</span>
+            <h4>Tool Calling (Function Calling)</h4>
+            <p>Agents emit JSON calls to external APIs (Calculator, Python REPL, Weather API, Database query) to perform real-world actions.</p>
+          </div>
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">📋</span>
+            <h4>Planning (ReAct / Plan-and-Solve)</h4>
+            <p>Reasoning frameworks like ReAct (Reason + Act) enable agents to break complex user goals into sequential logical steps.</p>
+          </div>
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">💾</span>
+            <h4>Short & Long-Term Memory</h4>
+            <p>Short-term memory stores current session conversation history; Long-term memory uses vector DBs to recall past interactions.</p>
+          </div>
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">🌐</span>
+            <h4>Web Search & Scraping</h4>
+            <p>Agents query Tavily / Google Search APIs to scrape real-time internet data beyond model cutoff dates.</p>
+          </div>
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">💻</span>
+            <h4>Computer Use (GUI Automation)</h4>
+            <p>Advanced agents (Anthropic Computer Use) move mouse cursors, click UI buttons, and type in desktop applications.</p>
+          </div>
+          <div class="agent-card glass-panel">
+            <span class="ag-icon">🤖</span>
+            <h4>Multi-Agent Systems</h4>
+            <p>Frameworks like AutoGen, CrewAI, and Swarm connect specialized agents (Researcher, Coder, Reviewer) working together in teams.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Agent Execution Workflow Simulator -->
+        <div class="agent-sim-box glass-panel margin-top-xl">
+          <h3 class="text-center margin-bottom-md">Interactive Agent Execution Simulator</h3>
+          <div class="agent-sim-header">
+            <span class="sim-label">User Objective Prompt:</span>
+            <div class="sim-prompt-box">
+              "Find the latest 2026 AI research papers on RAG optimization and summarize key findings into a report."
+            </div>
+            <button id="agent-run-sim-btn" class="btn btn-primary btn-sm margin-top-sm">▶ Run Autonomous Agent Workflow</button>
+          </div>
+
+          <div class="agent-step-pipeline margin-top-md" id="agent-sim-steps-box">
+            <div class="agent-step-item idle">
+              <span class="step-badge">STEP 1</span>
+              <div class="step-info">
+                <strong>Understand Request & Extract Goal</strong>
+                <p>Analyze user prompt intent and initialize agent memory context.</p>
+              </div>
+            </div>
+            <div class="agent-step-item idle">
+              <span class="step-badge">STEP 2</span>
+              <div class="step-info">
+                <strong>Formulate Execution Plan (ReAct)</strong>
+                <p>Draft multi-step sub-tasks: 1. Search ArXiv 2. Download PDFs 3. Extract key findings.</p>
+              </div>
+            </div>
+            <div class="agent-step-item idle">
+              <span class="step-badge">STEP 3</span>
+              <div class="step-info">
+                <strong>Tool Execution: Web Search API</strong>
+                <p>Query ArXiv API for terms: "RAG optimization", "GraphRAG", "BGE Reranker".</p>
+              </div>
+            </div>
+            <div class="agent-step-item idle">
+              <span class="step-badge">STEP 4</span>
+              <div class="step-info">
+                <strong>Retrieve & Parse Research Papers</strong>
+                <p>Injest PDF abstracts and extract vector embeddings for key findings.</p>
+              </div>
+            </div>
+            <div class="agent-step-item idle">
+              <span class="step-badge">STEP 5</span>
+              <div class="step-info">
+                <strong>Synthesize & Summarize Findings</strong>
+                <p>Run LLM summarization on extracted paper chunks.</p>
+              </div>
+            </div>
+            <div class="agent-step-item idle">
+              <span class="step-badge">STEP 6</span>
+              <div class="step-info">
+                <strong>Generate Final Structured Response</strong>
+                <p>Deliver formatted summary report with paper citations to user.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PROMPT ENGINEERING MASTERCLASS & SIMULATOR -->
+    <section id="prompt-engineering-masterclass" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">The Art & Science of AI Control</span>
+          <h2 class="section-title">Prompt Engineering Masterclass</h2>
+          <p class="section-desc">Master the core formulas and principles used by AI engineers: System Instructions, Zero-Shot vs Few-Shot, Chain-of-Thought, Context Ingestion, and Guardrails.</p>
+        </div>
+
+        <!-- Principles Infographic Banner -->
+        <div class="prompt-banner glass-panel">
+          <div class="prompt-diagram-wrap text-center">
+            <h3>Guide to Prompt Engineering Principles</h3>
+            <p class="text-muted margin-bottom-md">System Instructions ➔ Zero/Few Shot ➔ Chain-of-Thought Reasoning ➔ Context Ingestion ➔ Guardrail Validation</p>
+            <img src="images/prompt_engineering.jpg" alt="Prompt Engineering Principles Diagram" class="concept-image-lg rounded-lg shadow-lg">
+          </div>
+        </div>
+
+        <!-- Interactive Prompt Technique Simulator -->
+        <div class="prompt-sim-container glass-panel margin-top-xl">
+          <h3 class="text-center margin-bottom-md">Interactive Prompt Engineering Simulator</h3>
+          
+          <div class="technique-tabs" id="technique-tabs">
+            <!-- Populated dynamically via JS from PROMPT_TECHNIQUES_DATA -->
+          </div>
+
+          <div class="technique-workbench margin-top-md" id="technique-workbench">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Comprehensive Types of AI Prompts Showcase -->
+        <div class="prompt-types-showcase glass-panel margin-top-xl">
+          <h3 class="text-center margin-bottom-sm">Comprehensive Types of AI Prompts & Examples</h3>
+          <p class="text-center text-muted margin-bottom-md">Understand the 8 core prompt archetypes used in production AI software development, complete with real-world examples and ideal use cases.</p>
+
+          <div class="prompt-types-grid">
+            <!-- Type 1: System / Persona -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">👤</span>
+                <div>
+                  <h4>1. System / Persona Prompting</h4>
+                  <span class="pt-tag">Behavioral & Identity Control</span>
+                </div>
+              </div>
+              <p class="pt-desc">Defines the AI's foundational role, domain expertise, knowledge limits, and communication tone prior to user interaction.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"Act as a Senior Cloud Security Auditor. Output recommendations in clean Markdown bullet points. Never guess unverified API flags."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Enforcing professional domain tone, security boundaries, and expert responses.</div>
+            </div>
+
+            <!-- Type 2: Zero-Shot -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">🎯</span>
+                <div>
+                  <h4>2. Zero-Shot Direct Prompting</h4>
+                  <span class="pt-tag">Direct Instruction</span>
+                </div>
+              </div>
+              <p class="pt-desc">Directly instructing the LLM to execute a task without providing any prior training examples or exemplars.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"Summarize this 500-word research abstract into 3 executive bullet points suitable for a executive memo."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Standard Q&A, basic text summarization, translation, and straightforward coding tasks.</div>
+            </div>
+
+            <!-- Type 3: Few-Shot -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">📋</span>
+                <div>
+                  <h4>3. Few-Shot Exemplar Prompting</h4>
+                  <span class="pt-tag">Pattern Exemplars</span>
+                </div>
+              </div>
+              <p class="pt-desc">Providing 1 to 5 input-output examples inside the prompt so the model learns exact classification and formatting rules.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">Input: "Card charged twice!" -> {"sentiment": "Negative", "dept": "Billing"}
+Input: "Student plans?" -> {"sentiment": "Neutral", "dept": "Sales"}
+Now classify: "Database times out under load."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Data extraction, strict JSON output formatting, and niche category classification.</div>
+            </div>
+
+            <!-- Type 4: Chain-of-Thought -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">🧩</span>
+                <div>
+                  <h4>4. Chain-of-Thought (CoT)</h4>
+                  <span class="pt-tag">Step-by-Step Reasoning</span>
+                </div>
+              </div>
+              <p class="pt-desc">Instructing the model to write out its logical reasoning step-by-step in a thinking block before outputting the final answer.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"A bat and ball cost $1.10. The bat costs $1.00 more than the ball. Think step-by-step inside <thinking> before stating the ball's price."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Mathematical problem solving, algorithmic code generation, and complex logic puzzles.</div>
+            </div>
+
+            <!-- Type 5: Contextual / RAG -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">📚</span>
+                <div>
+                  <h4>5. Contextual / RAG Ingestion</h4>
+                  <span class="pt-tag">Grounded Knowledge Search</span>
+                </div>
+              </div>
+              <p class="pt-desc">Injecting retrieved document chunks inside explicit XML tags (&lt;context&gt;) alongside strict anti-hallucination guardrails.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"&lt;context&gt;Snippet [1]: Staff get 20 days paid leave.&lt;/context&gt;
+Question: How many leave days? Answer strictly using context."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Enterprise PDF search engines, documentation Q&A, and preventing AI hallucinations.</div>
+            </div>
+
+            <!-- Type 6: Output-Constrained -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">📐</span>
+                <div>
+                  <h4>6. Structured Output & Schema</h4>
+                  <span class="pt-tag">Machine-Readable APIs</span>
+                </div>
+              </div>
+              <p class="pt-desc">Enforcing strict Pydantic/Zod JSON schemas and regex rules to produce machine-readable outputs for automated APIs.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"Output strictly valid JSON with keys {"vulnerability": str, "severity": "CRITICAL"|"HIGH"}. Do NOT wrap in markdown."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> REST API backends, database ingestion pipelines, and automated security scanners.</div>
+            </div>
+
+            <!-- Type 7: Negative / Constraint -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">⛔</span>
+                <div>
+                  <h4>7. Negative & Constraint Prompting</h4>
+                  <span class="pt-tag">Boundary Exclusions</span>
+                </div>
+              </div>
+              <p class="pt-desc">Explicitly declaring boundaries for what the AI MUST NOT mention, assume, output, or use in its response.</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"Explain quantum computing to a 10-year-old child. Constraints: DO NOT use equations, DO NOT use technical jargon."</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Kid-friendly content, executive summaries, and output safety enforcement.</div>
+            </div>
+
+            <!-- Type 8: Autonomous Agent ReAct -->
+            <div class="prompt-type-card glass-panel">
+              <div class="pt-header">
+                <span class="pt-icon">🤖</span>
+                <div>
+                  <h4>8. Autonomous Agent ReAct</h4>
+                  <span class="pt-tag">Tool Calling & Execution Loop</span>
+                </div>
+              </div>
+              <p class="pt-desc">Empowering AI Agents to interleave reasoning (&lt;thought&gt;) with real-world tool execution JSON (&lt;action&gt;).</p>
+              <div class="pt-example-box">
+                <span class="example-label">Example Prompt:</span>
+                <pre class="prompt-text-box">"Goal: Find Nvidia stock price.
+1. &lt;thought&gt;Need stock data&lt;/thought&gt;
+2. &lt;action&gt;{"tool": "web_search", "query": "Nvidia stock 2026"}&lt;/action&gt;"</pre>
+              </div>
+              <div class="pt-usecase">🎯 <strong>Best For:</strong> Web search agents, code execution sandboxes, and multi-agent workflow systems.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. COMPUTER VISION SECTION -->
+    <section id="computer-vision-section" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Visual Intelligence</span>
+          <h2 class="section-title">Computer Vision Tasks & Models</h2>
+          <p class="section-desc">Explore the 6 core visual AI capabilities powering autonomous vehicles, medical scans, surveillance cameras, and robotics.</p>
+        </div>
+
+        <div class="cv-tasks-grid">
+          <div class="cv-card glass-panel" data-cv="cls">
+            <div class="cv-icon">🏷️</div>
+            <h4>1. Image Classification</h4>
+            <p><strong>Pipeline:</strong> Image ➔ Class Label</p>
+            <p class="cv-desc">Assigns a single category tag (e.g., "Golden Retriever", "Defective PCB") to an entire image. Models: ResNet, EfficientNet V2.</p>
+          </div>
+
+          <div class="cv-card glass-panel" data-cv="det">
+            <div class="cv-icon">📦</div>
+            <h4>2. Object Detection</h4>
+            <p><strong>Pipeline:</strong> Image ➔ Objects + Bounding Boxes</p>
+            <p class="cv-desc">Identifies multiple objects and draws 2D bounding boxes with class labels. Models: YOLOv8, RT-DETR.</p>
+          </div>
+
+          <div class="cv-card glass-panel" data-cv="seg">
+            <div class="cv-icon">✂️</div>
+            <h4>3. Segmentation</h4>
+            <p><strong>Pipeline:</strong> Image ➔ Pixel-Level Masks</p>
+            <p class="cv-desc">Classifies every individual pixel in an image for surgical precision. Models: SAM 2, Mask R-CNN.</p>
+          </div>
+
+          <div class="cv-card glass-panel" data-cv="ocr">
+            <div class="cv-icon">📄</div>
+            <h4>4. Optical Character Recognition (OCR)</h4>
+            <p><strong>Pipeline:</strong> Image ➔ Text / Markdown</p>
+            <p class="cv-desc">Extracts printed and handwritten text from images, invoices, and receipts. Models: GOT-OCR 2.0, PaddleOCR.</p>
+          </div>
+
+          <div class="cv-card glass-panel" data-cv="face">
+            <div class="cv-icon">👤</div>
+            <h4>5. Face Recognition</h4>
+            <p><strong>Pipeline:</strong> Face ➔ 512-dim Vector Identity</p>
+            <p class="cv-desc">Extracts unique facial biometric embeddings for access verification. Models: ArcFace, InsightFace.</p>
+          </div>
+
+          <div class="cv-card glass-panel" data-cv="pose">
+            <div class="cv-icon">🏃</div>
+            <h4>6. Pose Estimation</h4>
+            <p><strong>Pipeline:</strong> Image ➔ Human 17-Keypoint Skeletons</p>
+            <p class="cv-desc">Tracks anatomical joint positions (shoulders, knees, elbows) in real time. Models: YOLOv8-pose, OpenPose.</p>
+          </div>
+        </div>
+
+        <!-- Interactive Computer Vision Interactive Visualizer Demo -->
+        <div class="cv-interactive-demo glass-panel margin-top-xl">
+          <h3 class="text-center margin-bottom-md">Interactive Computer Vision Visualizer Demo</h3>
+          <div class="cv-demo-controls text-center margin-bottom-sm">
+            <button class="btn btn-secondary btn-sm cv-btn active" data-task="det">📦 Object Detection (Bounding Boxes)</button>
+            <button class="btn btn-secondary btn-sm cv-btn" data-task="seg">✂️ Pixel Segmentation Mask</button>
+            <button class="btn btn-secondary btn-sm cv-btn" data-task="pose">🏃 Pose Keypoints Skeleton</button>
+            <button class="btn btn-secondary btn-sm cv-btn" data-task="ocr">📄 OCR Text Extraction</button>
+          </div>
+
+          <div class="cv-viewport-box" id="cv-viewport-box">
+            <!-- Canvas / Visual Overlay Rendered via JS -->
+            <div class="cv-sample-canvas" id="cv-sample-canvas">
+              <div class="cv-overlay-element" id="cv-overlay-element">
+                <!-- Dynamic SVG / Bounding Box HTML -->
+              </div>
+            </div>
+            <div class="cv-info-callout text-center margin-top-sm" id="cv-task-info">
+              Showing simulated bounding boxes generated by YOLOv8-x (Confidence: 98.4%).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. SPEECH AI SECTION -->
+    <section id="speech-ai-section" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Audio & Voice Intelligence</span>
+          <h2 class="section-title">Speech AI Pipeline & Models</h2>
+          <p class="section-desc">Understanding Speech-to-Text (STT), Voice Activity Detection (VAD), Text-to-Speech (TTS), and Voice Cloning.</p>
+        </div>
+
+        <div class="speech-pipeline-box glass-panel text-center">
+          <h3>Speech AI Architecture Pipeline</h3>
+          <div class="speech-steps-horizontal margin-top-md">
+            <div class="s-step"><span class="s-icon">🎙️</span> Microphone</div>
+            <div class="s-arrow">➔</div>
+            <div class="s-step"><span class="s-icon">📊</span> VAD Noise Filter</div>
+            <div class="s-arrow">➔</div>
+            <div class="s-step"><span class="s-icon">📝</span> Whisper STT</div>
+            <div class="s-arrow">➔</div>
+            <div class="s-step"><span class="s-icon">🧠</span> LLM Brain</div>
+            <div class="s-arrow">➔</div>
+            <div class="s-step"><span class="s-icon">🔊</span> Piper / XTTS</div>
+            <div class="s-arrow">➔</div>
+            <div class="s-step"><span class="s-icon">🎧</span> Speaker</div>
+          </div>
+        </div>
+
+        <div class="speech-grid margin-top-xl">
+          <div class="speech-card glass-panel">
+            <h4>Whisper (ASR)</h4>
+            <p>OpenAI's open-source Automatic Speech Recognition model trained on 680,000 hours of multilingual audio. Extremely robust to background noise.</p>
+          </div>
+          <div class="speech-card glass-panel">
+            <h4>Voice Activity Detection (VAD)</h4>
+            <p>Lightweight neural nets (Silero VAD) that detect human speech start and end points in real time, preventing useless silence chunks from hitting APIs.</p>
+          </div>
+          <div class="speech-card glass-panel">
+            <h4>Piper TTS (Edge)</h4>
+            <p>Ultra-fast neural text-to-speech engine running sub-50ms offline on local CPUs and Raspberry Pi devices.</p>
+          </div>
+          <div class="speech-card glass-panel">
+            <h4>XTTS v2 (Voice Cloning)</h4>
+            <p>Zero-shot voice synthesizer that clones any human voice cadence from a tiny 3-second audio sample in 17 languages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. AI MODEL COMPARISON SECTION -->
+    <section id="model-comparison-section" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Side-by-Side Matrix</span>
+          <h2 class="section-title">Interactive AI Model Comparison</h2>
+          <p class="section-desc">Search, filter, and sort models by category, speed rating, quality score, input/output types, and open-source availability.</p>
+        </div>
+
+        <div class="table-controls-bar glass-panel margin-bottom-md">
+          <div class="table-search-wrap">
+            <input type="text" id="comp-search-input" class="form-control" placeholder="Filter table models...">
+          </div>
+
+          <div class="table-filter-group">
+            <select id="comp-cat-filter" class="form-control">
+              <option value="all">All Categories</option>
+              <option value="llm">LLMs</option>
+              <option value="embedding">Embeddings</option>
+              <option value="vlm">Vision-Language</option>
+              <option value="object_det">Computer Vision</option>
+              <option value="stt">Speech-to-Text</option>
+              <option value="image_gen">Image Gen</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive glass-panel">
+          <table class="comparison-table" id="comparison-table">
+            <thead>
+              <tr>
+                <th data-sort="name" class="sortable">Model Name ↕</th>
+                <th data-sort="category" class="sortable">Category ↕</th>
+                <th>Parameters</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Local</th>
+                <th>API</th>
+                <th>License</th>
+                <th>Best Use Case</th>
+                <th data-sort="speed" class="sortable">Speed ↕</th>
+                <th data-sort="quality" class="sortable">Quality ↕</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-tbody">
+              <!-- Populated dynamically via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. AI MODEL SELECTION WIZARD -->
+    <section id="model-wizard-section" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Smart Recommendation Engine</span>
+          <h2 class="section-title">AI Model Selection Wizard</h2>
+          <p class="section-desc">Answer 2 simple questions about your build target and deployment constraints to receive a tailored tech stack recommendation!</p>
+        </div>
+
+        <div class="wizard-card glass-panel text-center">
+          <div class="wizard-step" id="wiz-step-1">
+            <h3>Step 1: What are you building?</h3>
+            <div class="wizard-options-grid margin-top-md" id="wiz-build-options">
+              <button class="wiz-opt-btn" data-val="chatbot">💬 Chatbot</button>
+              <button class="wiz-opt-btn" data-val="rag">📚 RAG System</button>
+              <button class="wiz-opt-btn" data-val="voice">🎙️ Voice Assistant</button>
+              <button class="wiz-opt-btn" data-val="agent">🤖 Autonomous AI Agent</button>
+              <button class="wiz-opt-btn" data-val="image_cls">🏷️ Image Classifier</button>
+              <button class="wiz-opt-btn" data-val="object_det">📦 Object Detection System</button>
+              <button class="wiz-opt-btn" data-val="document">📄 Document AI / OCR</button>
+              <button class="wiz-opt-btn" data-val="recommendation">💡 Recommendation System</button>
+              <button class="wiz-opt-btn" data-val="forecasting">📈 Forecasting System</button>
+              <button class="wiz-opt-btn" data-val="jarvis">✨ JARVIS Assistant</button>
+              <button class="wiz-opt-btn" data-val="research">📚 AI Research Assistant</button>
+            </div>
+          </div>
+
+          <div class="wizard-result hidden margin-top-lg" id="wiz-result-box">
+            <!-- Recommended Stack Rendered via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. REAL-WORLD AI PROJECTS (12 BLUEPRINTS) -->
+    <section id="real-world-projects" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Portfolio & Architecture Blueprints</span>
+          <h2 class="section-title">12 Real-World AI Projects</h2>
+          <p class="section-desc">Production-grade architecture blueprints complete with model requirements, technology stacks, difficulty levels, and API specs.</p>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Populated dynamically via JS from AI_PROJECTS_DATA -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. AI LEARNING ROADMAP -->
+    <section id="learning-roadmap" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Step-by-Step Curriculum</span>
+          <h2 class="section-title">AI Learning Roadmap</h2>
+          <p class="section-desc">From AI Fundamentals to Production AI — click any level node to mark your learning progress!</p>
+        </div>
+
+        <div class="roadmap-tracker glass-panel margin-bottom-lg text-center">
+          <span>Overall AI Roadmap Progress: <strong id="roadmap-percent-text">0% Completed</strong></span>
+          <div class="tracker-progress-bg margin-top-xs">
+            <div class="tracker-progress-fill" id="roadmap-progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="roadmap-tree glass-panel" id="roadmap-tree">
+          <div class="roadmap-level">
+            <div class="level-header">Level 1 — AI Fundamentals</div>
+            <div class="level-nodes">
+              <button class="roadmap-node" data-node="py">Python Programming</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="ml">Machine Learning Basics</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="dl">Deep Learning & Neural Nets</button>
+            </div>
+          </div>
+
+          <div class="roadmap-level margin-top-md">
+            <div class="level-header">Level 2 — Modern AI Foundations</div>
+            <div class="level-nodes">
+              <button class="roadmap-node" data-node="tf">Transformers & Attention</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="llm">Large Language Models (LLMs)</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="emb">Embeddings & Vector DBs</button>
+            </div>
+          </div>
+
+          <div class="roadmap-level margin-top-md">
+            <div class="level-header">Level 3 — RAG Systems</div>
+            <div class="level-nodes">
+              <button class="roadmap-node" data-node="chunk">Document Processing & Chunking</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="ret">Retrieval & Similarity Search</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="rerank">Reranking & Grounded RAG</button>
+            </div>
+          </div>
+
+          <div class="roadmap-level margin-top-md">
+            <div class="level-header">Level 4 — AI Agents & Automation</div>
+            <div class="level-nodes">
+              <button class="roadmap-node" data-node="tools">Tool Calling & Function APIs</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="mem">Agent Memory & Planning</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="agents">Autonomous Agent Loops</button>
+            </div>
+          </div>
+
+          <div class="roadmap-level margin-top-md">
+            <div class="level-header">Level 5 — Advanced Production AI</div>
+            <div class="level-nodes">
+              <button class="roadmap-node" data-node="multi">Multimodal Vision & Speech</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="multiagent">Multi-Agent Systems & Computer Use</button>
+              <span class="r-arrow">➔</span>
+              <button class="roadmap-node" data-node="prod">Production Deployment & Monitoring</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESERVED SECTIONS FROM ORIGINAL WEBSITE -->
+
+    <!-- WHAT IS AI? SECTION -->
+    <section id="what-is-ai" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Demystifying Technology</span>
+          <h2 class="section-title">What is Artificial Intelligence?</h2>
+          <p class="section-desc">
+            Core concepts broken down into simple, bite-sized explanations.
+          </p>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card glass-panel">
+            <div class="concept-icon blue">🤖</div>
+            <h3>Artificial Intelligence (AI)</h3>
+            <p>The broad field of computer science focused on building smart machines capable of performing human tasks — like recognizing speech, making decisions, or translating languages.</p>
+          </div>
+
+          <div class="concept-card glass-panel">
+            <div class="concept-icon purple">🧠</div>
+            <h3>Machine Learning (ML)</h3>
+            <p>A subset of AI where computers learn patterns from large amounts of training data instead of being explicitly programmed with fixed step-by-step rules.</p>
+          </div>
+
+          <div class="concept-card glass-panel">
+            <div class="concept-icon cyan">✨</div>
+            <h3>Generative AI (GenAI)</h3>
+            <p>A specialized type of AI model that creates brand-new content — such as essay drafts, realistic images, music, or computer code — based on learned patterns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOFTWARE FIELD SECTION -->
+    <section id="software-field" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Industry & Tech Domain</span>
+          <h2 class="section-title">AI in Software Engineering</h2>
+          <p class="section-desc">Discover how artificial intelligence transforms modern software development, system architecture, and DevOps pipelines.</p>
+        </div>
+
+        <div class="concept-grid">
+          <div class="concept-card glass-panel">
+            <div class="concept-icon blue">⚡</div>
+            <h3>AI-Assisted Coding & Refactoring</h3>
+            <p>Tools like GitHub Copilot and Cursor act as pair programmers, autocompleting code functions, writing unit tests, and detecting syntax bugs before compilation.</p>
+          </div>
+
+          <div class="concept-card glass-panel">
+            <div class="concept-icon purple">🌐</div>
+            <h3>System Architecture & APIs</h3>
+            <p>Modern software connects microservices, databases, caching layers, and LLM APIs (OpenAI, Anthropic, Gemini) via secure REST and gRPC endpoints.</p>
+          </div>
+
+          <div class="concept-card glass-panel">
+            <div class="concept-icon cyan">🚀</div>
+            <h3>DevOps & Automation</h3>
+            <p>Continuous Integration (CI) and Continuous Deployment (CD) pipelines use AI to automate code reviews, security scanning, and cloud deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS EXPLORER SECTION -->
+    <section id="tools-explorer" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Student Tech Stack</span>
+          <h2 class="section-title">AI Tools Explorer</h2>
+          <p class="section-desc">Discover popular AI tools categorized by student use cases, pricing options, and pro tips.</p>
+        </div>
+
+        <div class="filter-tabs" id="tools-filter-tabs" role="tablist">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Tools</button>
+          <button class="filter-btn" data-filter="video" role="tab">🎬 Video AI</button>
+          <button class="filter-btn" data-filter="image" role="tab">🎨 Image & Design</button>
+          <button class="filter-btn" data-filter="coding" role="tab">💻 Dev & Projects</button>
+          <button class="filter-btn" data-filter="audio" role="tab">🎵 Audio & Voice</button>
+          <button class="filter-btn" data-filter="research" role="tab">📚 Research & Data</button>
+        </div>
+
+        <div class="tools-grid" id="tools-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMPTING 101 SECTION -->
+    <section id="prompting-101" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">The Art of AI Communication</span>
+          <h2 class="section-title">Prompt Writing 101</h2>
+          <p class="section-desc">Master the 5-part formula (Role + Task + Context + Format + Constraints) to get accurate responses every single time.</p>
+        </div>
+
+        <div class="formula-container glass-panel">
+          <h3 class="formula-title text-center">The Perfect Prompt Formula</h3>
+          <div class="formula-badges">
+            <div class="formula-pill role">👤 Role</div>
+            <span class="plus">+</span>
+            <div class="formula-pill task">🎯 Task</div>
+            <span class="plus">+</span>
+            <div class="formula-pill context">📖 Context</div>
+            <span class="plus">+</span>
+            <div class="formula-pill format">📐 Format</div>
+            <span class="plus">+</span>
+            <div class="formula-pill constraints">⛔ Constraints</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE LAB SECTION (PRESERVED) -->
+    <section id="interactive-lab" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">High-Performance Interactive Lab</span>
+          <h2 class="section-title">The Interactive AI & Software Lab</h2>
+          <p class="section-desc">Play with live interactive models built directly in your browser with real-time feedback.</p>
+        </div>
+
+        <div class="lab-tracker-bar glass-panel margin-bottom-xl">
+          <div class="tracker-info">
+            <span class="tracker-title">🎓 Lab Completion Status</span>
+            <span class="tracker-count" id="lab-completed-text">0 of 5 Models Completed</span>
+          </div>
+          <div class="tracker-progress-bg">
+            <div class="tracker-progress-fill" id="lab-progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="lab-models-grid">
+          <!-- Model 1: LLM Predictor -->
+          <article class="lab-card glass-panel" id="model-1" data-model-id="llm-predictor">
+            <div class="lab-card-header">
+              <div class="model-title-wrap">
+                <span class="model-number">01</span>
+                <h3>How LLMs Predict Words & Temperature</h3>
+              </div>
+              <button class="completion-btn" data-target="model-1">
+                <span class="check-icon">✓</span> <span class="comp-text">Mark Completed</span>
+              </button>
+            </div>
+            <div class="lab-card-body">
+              <div class="model-workbench">
+                <div class="llm-input-area">
+                  <label for="llm-prompt-select">Select a starter sentence:</label>
+                  <select id="llm-prompt-select" class="form-control margin-bottom-sm">
+                    <option value="The future of artificial intelligence is">"The future of artificial intelligence is..."</option>
+                    <option value="Students who learn to prompt effectively can">"Students who learn to prompt effectively can..."</option>
+                  </select>
+                  <div class="tokens-display" id="llm-tokens-box"></div>
+                  <div class="generated-text-box margin-top-sm" id="llm-generated-output"></div>
+                </div>
+                <div class="llm-sidebar">
+                  <div class="control-group">
+                    <label for="llm-temp-slider">Temperature: <strong id="llm-temp-val">0.7</strong></label>
+                    <input type="range" id="llm-temp-slider" min="0.1" max="1.5" step="0.1" value="0.7" class="form-slider">
+                  </div>
+                  <div class="chart-container margin-top-sm">
+                    <span class="chart-title">Top-5 Probabilities:</span>
+                    <div class="prob-bars" id="llm-prob-bars"></div>
+                  </div>
+                  <div class="button-row margin-top-md">
+                    <button id="llm-step-btn" class="btn btn-secondary btn-sm">▶ Next Word</button>
+                    <button id="llm-auto-btn" class="btn btn-primary btn-sm">⚡ Auto-Complete</button>
+                    <button id="llm-reset-btn" class="btn btn-outline btn-sm">🔄 Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Model 2: Prompt Quality Analyzer -->
+          <article class="lab-card glass-panel" id="model-2" data-model-id="prompt-analyzer">
+            <div class="lab-card-header">
+              <div class="model-title-wrap">
+                <span class="model-number">02</span>
+                <h3>Advanced Prompt Quality Analyzer</h3>
+              </div>
+              <button class="completion-btn" data-target="model-2">
+                <span class="check-icon">✓</span> <span class="comp-text">Mark Completed</span>
+              </button>
+            </div>
+            <div class="lab-card-body">
+              <div class="model-workbench vertical">
+                <!-- Preset Starter Prompt Buttons -->
+                <div class="analyzer-preset-bar margin-bottom-xs">
+                  <span class="text-xs text-muted">Test Presets:</span>
+                  <button class="btn btn-outline btn-xs analyzer-preset-btn" data-preset="vague">❌ Vague ("write python code")</button>
+                  <button class="btn btn-outline btn-xs analyzer-preset-btn" data-preset="mid">⚡ Mid-Tier ("refactor function to async")</button>
+                  <button class="btn btn-outline btn-xs analyzer-preset-btn" data-preset="perfect">🔥 Perfect 100/100 Formula</button>
+                </div>
+
+                <textarea id="analyzer-input" class="form-control prompt-textarea" rows="3" placeholder="Type or paste any prompt to analyze quality score, missing elements, and actionable recommendations in real-time..."></textarea>
+                
+                <div class="analyzer-dashboard margin-top-md">
+                  <div class="score-box">
+                    <div class="score-circle" id="analyzer-score-circle">
+                      <span class="score-val" id="analyzer-score-num">0</span>
+                      <span class="score-max">/100</span>
+                    </div>
+                    <span class="score-label" id="analyzer-score-label">Needs Work</span>
+                  </div>
+                  <div class="checklist-box">
+                    <div class="check-grid">
+                      <div class="check-item" id="chk-role"><span class="chk-icon">❌</span> Role</div>
+                      <div class="check-item" id="chk-task"><span class="chk-icon">❌</span> Task</div>
+                      <div class="check-item" id="chk-context"><span class="chk-icon">❌</span> Context</div>
+                      <div class="check-item" id="chk-format"><span class="chk-icon">❌</span> Format</div>
+                      <div class="check-item" id="chk-constraints"><span class="chk-icon">❌</span> Constraints</div>
+                      <div class="check-item" id="chk-tone"><span class="chk-icon">❌</span> Tone</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Actionable Recommendations & Suggestions Box -->
+                <div class="analyzer-feedback-box margin-top-sm" id="analyzer-feedback-box">
+                  <span class="text-xs text-muted">💡 Type a prompt above to receive instant recommendations.</span>
+                </div>
+
+                <div class="button-row margin-top-md">
+                  <button id="analyzer-improve-btn" class="btn btn-primary btn-sm">✨ Auto-Improve to 100/100</button>
+                  <button id="analyzer-reset-btn" class="btn btn-outline btn-sm">🔄 Clear</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Model 3: Chat Simulator -->
+          <article class="lab-card glass-panel" id="model-3" data-model-id="chat-simulator">
+            <div class="lab-card-header">
+              <div class="model-title-wrap">
+                <span class="model-number">03</span>
+                <h3>Mock AI Chat Simulator (Vague vs Detailed)</h3>
+              </div>
+              <button class="completion-btn" data-target="model-3">
+                <span class="check-icon">✓</span> <span class="comp-text">Mark Completed</span>
+              </button>
+            </div>
+            <div class="lab-card-body">
+              <div class="model-workbench vertical">
+                <select id="chat-preset-select" class="form-control margin-bottom-sm">
+                  <option value="study">Study Plan</option>
+                  <option value="coding">Debugging Python Code</option>
+                </select>
+                <div class="side-by-side-chat">
+                  <div class="chat-column vague-column">
+                    <div class="chat-column-header bad-badge">❌ Vague Prompt</div>
+                    <div class="chat-messages-box" id="chat-vague-box"></div>
+                  </div>
+                  <div class="chat-column detailed-column">
+                    <div class="chat-column-header good-badge">✅ Detailed Prompt</div>
+                    <div class="chat-messages-box" id="chat-detailed-box"></div>
+                  </div>
+                </div>
+                <div class="button-row margin-top-md">
+                  <button id="chat-run-btn" class="btn btn-primary btn-sm">▶ Send Questions Side-by-Side</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Model 4: Architecture Flow -->
+          <article class="lab-card glass-panel" id="model-4" data-model-id="arch-simulator">
+            <div class="lab-card-header">
+              <div class="model-title-wrap">
+                <span class="model-number">04</span>
+                <h3>Software Architecture Request Flow</h3>
+              </div>
+              <button class="completion-btn" data-target="model-4">
+                <span class="check-icon">✓</span> <span class="comp-text">Mark Completed</span>
+              </button>
+            </div>
+            <div class="lab-card-body">
+              <div class="model-workbench vertical">
+                <div class="arch-topology-container" id="arch-topology-map">
+                  <div class="topo-node node-client">💻 Client</div>
+                  <div class="topo-arrow">⚡</div>
+                  <div class="topo-node node-gateway">🛡️ API Gateway</div>
+                  <div class="topo-arrow">⚡</div>
+                  <div class="topo-node node-lb">⚖️ Load Balancer</div>
+                  <div class="topo-arrow">⚡</div>
+                  <div class="topo-node node-db">🗄️ Vector DB</div>
+                </div>
+                <div class="button-row margin-top-md">
+                  <button id="arch-send-packet-btn" class="btn btn-primary btn-sm">⚡ Trigger Traffic Spike</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Model 5: Token Estimator -->
+          <article class="lab-card glass-panel" id="model-5" data-model-id="token-estimator">
+            <div class="lab-card-header">
+              <div class="model-title-wrap">
+                <span class="model-number">05</span>
+                <h3>Token & API Cost Estimator</h3>
+              </div>
+              <button class="completion-btn" data-target="model-5">
+                <span class="check-icon">✓</span> <span class="comp-text">Mark Completed</span>
+              </button>
+            </div>
+            <div class="lab-card-body">
+              <div class="model-workbench vertical">
+                <textarea id="token-input" class="form-control prompt-textarea" rows="3" placeholder="Type text to calculate tokens..."></textarea>
+                <div class="stats-row margin-top-md">
+                  <div class="mini-stat-card"><span class="m-val" id="tok-count-char">0</span><span class="m-lbl">Chars</span></div>
+                  <div class="mini-stat-card"><span class="m-val" id="tok-count-word">0</span><span class="m-lbl">Words</span></div>
+                  <div class="mini-stat-card highlight-stat"><span class="m-val" id="tok-count-tokens">0</span><span class="m-lbl">Est. Tokens</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMPT LIBRARY SECTION -->
+    <section id="prompt-library" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Ready-to-Use Templates</span>
+          <h2 class="section-title">Prompt Examples Library</h2>
+          <p class="section-desc">Copy and customize field-tested prompts for coding, system architecture, research, and AI agents.</p>
+        </div>
+        <div class="prompts-grid margin-top-lg" id="prompts-grid"></div>
+      </div>
+    </section>
+
+    <!-- RESPONSIBLE ETHICS SECTION -->
+    <section id="responsible-use" class="section-padding bg-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Ethics & Digital Citizenship</span>
+          <h2 class="section-title">Responsible AI Use Guide</h2>
+          <p class="section-desc">AI is a powerful thought partner — use it responsibly, fact-check outputs, and protect private data.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section id="quiz-section" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tagline">Test Your Knowledge</span>
+          <h2 class="section-title">AI & Software Engineering Quiz</h2>
+          <p class="section-desc">Answer 8 short questions to test what you've learned and earn your score!</p>
+        </div>
+
+        <div class="quiz-container glass-panel">
+          <div class="quiz-header">
+            <span class="quiz-progress-text" id="quiz-progress-text">Question 1 of 8</span>
+            <div class="quiz-progress-bar">
+              <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 12.5%;"></div>
+            </div>
+          </div>
+          <div class="quiz-body" id="quiz-body">
+            <h3 class="quiz-question" id="quiz-question-text">Loading Question...</h3>
+            <div class="quiz-options" id="quiz-options-container"></div>
+            <div class="quiz-feedback hidden" id="quiz-feedback-box"></div>
+          </div>
+          <div class="quiz-summary hidden text-center" id="quiz-summary-box">
+            <div class="badge-icon-lg" id="quiz-badge-icon">🏆</div>
+            <h3 id="quiz-score-title">Quiz Completed!</h3>
+            <p class="quiz-score-subtitle" id="quiz-score-detail">You scored 8 out of 8 (100%)</p>
+            <div class="button-row margin-top-md center-buttons">
+              <button id="quiz-restart-btn" class="btn btn-primary">🔄 Retake Quiz</button>
+            </div>
+          </div>
+          <div class="quiz-footer" id="quiz-footer-nav">
+            <button id="quiz-next-btn" class="btn btn-primary btn-sm" disabled>Next Question ➔</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-icon">✨</span>
+        <span class="logo-text">AI Model <span class="highlight">Hub</span></span>
+        <p>Empowering developers, students, and engineers to master artificial intelligence models, RAG, AI agents, and system architecture.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="#ai-models-explorer">AI Models</a>
+        <a href="#rag-section">RAG Architecture</a>
+        <a href="#ai-agents-section">AI Agents</a>
+        <a href="#ai-architectures-section">Architectures</a>
+        <a href="#real-world-projects">Real-World Projects</a>
+        <a href="#learning-roadmap">Roadmap</a>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>© 2026 AI Model Hub — Powered by HTML5, Vanilla CSS & Vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- MODEL DETAIL MODAL -->
+  <div id="model-detail-modal" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal-backdrop" id="model-modal-backdrop"></div>
+    <div class="modal-card glass-panel" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3 id="modal-model-title">Model Title</h3>
+        <button id="modal-close-btn" class="icon-btn-sm close-btn">✕</button>
+      </div>
+      <div class="modal-body" id="modal-model-body">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div id="project-detail-modal" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal-backdrop" id="project-modal-backdrop"></div>
+    <div class="modal-card glass-panel" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3 id="modal-project-title">Project Architecture Blueprint</h3>
+        <button id="project-modal-close-btn" class="icon-btn-sm close-btn">✕</button>
+      </div>
+      <div class="modal-body" id="modal-project-body">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- VOICE AI CHATBOT WIDGET -->
+  <button id="voice-fab" class="voice-fab-btn" aria-label="Open Voice AI Assistant" title="AI Voice Assistant (Ctrl+Shift+V)">
+    <div class="voice-fab-inner">
+      <span class="fab-icon-mic">🎙️</span>
+      <span class="fab-pulse-badge">Voice AI</span>
+    </div>
+  </button>
+
+  <div id="voice-modal" class="voice-modal-overlay hidden" aria-hidden="true">
+    <div class="voice-modal-backdrop" id="voice-modal-backdrop"></div>
+    <div class="voice-modal-card" role="dialog" aria-modal="true">
+      
+      <!-- Header Actions -->
+      <div class="voice-card-header">
+        <div class="voice-header-brand">
+          <div class="voice-avatar">✨</div>
+          <div class="voice-header-titles">
+            <h3 class="voice-title-text">AI Voice Assistant</h3>
+            <span class="voice-subtitle-text" id="voice-status-text">Ready • Click 🎙️ or pick a suggestion chip</span>
+          </div>
+        </div>
+
+        <div class="voice-header-actions">
+          <button id="voice-persona-btn" class="icon-btn-sm" title="AI Intelligence Persona" aria-label="AI Persona">🧠</button>
+          <button id="voice-export-btn" class="icon-btn-sm" title="Export Chat Markdown" aria-label="Export Chat">📥</button>
+          <button id="voice-settings-btn" class="icon-btn-sm" title="Voice Settings" aria-label="Voice Settings">⚙️</button>
+          <button id="voice-clear-btn" class="icon-btn-sm" title="Clear Conversation" aria-label="Clear Chat">🗑️</button>
+          <button id="voice-close-btn" class="icon-btn-sm close-btn" title="Close Assistant" aria-label="Close">✕</button>
+        </div>
+      </div>
+
+      <!-- Collapsible AI Persona Panel -->
+      <div id="voice-persona-panel" class="voice-panel hidden">
+        <span class="panel-title">Select AI Expert Persona:</span>
+        <div class="persona-grid margin-top-xs">
+          <button class="persona-btn active" data-persona="scholar">🧠 Scholar (Deep AI Math)</button>
+          <button class="persona-btn" data-persona="coder">⚡ Code Architect (Clean Systems)</button>
+          <button class="persona-btn" data-persona="prompter">🎨 Prompt Engineer (100/100 Formulas)</button>
+          <button class="persona-btn" data-persona="agent">🚀 Agent (Tools & Workflows)</button>
+        </div>
+      </div>
+
+      <!-- Collapsible Settings Panel -->
+      <div id="voice-settings-panel" class="voice-panel hidden">
+        <div class="setting-row margin-bottom-xs">
+          <label for="voice-select-dropdown">Voice Avatar:</label>
+          <select id="voice-select-dropdown" class="form-control form-control-sm">
+            <option value="">Default Neural AI Voice</option>
+          </select>
+        </div>
+        <div class="setting-grid">
+          <div class="setting-col">
+            <label for="voice-pitch-range">Pitch (<span id="voice-pitch-val">1.0</span>)</label>
+            <input type="range" id="voice-pitch-range" min="0.5" max="1.5" step="0.1" value="1.0" class="form-slider">
+          </div>
+          <div class="setting-col">
+            <label for="voice-speed-range">Speed (<span id="voice-speed-val">1.0x</span>)</label>
+            <input type="range" id="voice-speed-range" min="0.7" max="1.5" step="0.1" value="1.0" class="form-slider">
+          </div>
+        </div>
+        <div class="setting-row margin-top-xs">
+          <label class="checkbox-label">
+            <input type="checkbox" id="voice-auto-speak" checked>
+            <span>Auto-speak AI response aloud</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Audio Spectrum Canvas Visualizer -->
+      <div class="voice-visualizer-container">
+        <canvas id="voice-canvas-visualizer" width="480" height="64"></canvas>
+      </div>
+
+      <!-- Quick Suggestion Chips covering ALL website topics -->
+      <div class="voice-chips-container" id="voice-chips-container">
+        <button class="voice-chip-btn" data-prompt="✨ What is AI Model Hub?">✨ Overview</button>
+        <button class="voice-chip-btn" data-prompt="🤖 Explore AI Models Catalog">🤖 AI Models</button>
+        <button class="voice-chip-btn" data-prompt="⭐ Show Popular Models Spotlight">⭐ Popular Spotlight</button>
+        <button class="voice-chip-btn" data-prompt="📚 Explain RAG System Architecture">📚 RAG Architecture</button>
+        <button class="voice-chip-btn" data-prompt="🎮 Open RAG Playground Simulator">🎮 RAG Playground</button>
+        <button class="voice-chip-btn" data-prompt="🏗️ Show AI System Architectures">🏗️ AI Architectures</button>
+        <button class="voice-chip-btn" data-prompt="🤖 Explain Autonomous AI Agents">🤖 AI Agents</button>
+        <button class="voice-chip-btn" data-prompt="🎨 Open Prompt Masterclass">🎨 Prompting</button>
+        <button class="voice-chip-btn" data-prompt="👁️ How does Computer Vision work?">👁️ Computer Vision</button>
+        <button class="voice-chip-btn" data-prompt="🎙️ Explain Speech AI Pipeline">🎙️ Speech AI</button>
+        <button class="voice-chip-btn" data-prompt="📊 Open Model Comparison Matrix">📊 Model Matrix</button>
+        <button class="voice-chip-btn" data-prompt="🧙 Open Model Selection Wizard">🧙 Model Wizard</button>
+        <button class="voice-chip-btn" data-prompt="🚀 Show 12 Real-World Projects">🚀 12 Projects</button>
+        <button class="voice-chip-btn" data-prompt="🗺️ Open AI Learning Roadmap">🗺️ Roadmap</button>
+        <button class="voice-chip-btn" data-prompt="⚡ How is AI used in Software Engineering?">⚡ Software AI</button>
+        <button class="voice-chip-btn" data-prompt="💻 Show AI Tools Explorer">💻 Tools Explorer</button>
+        <button class="voice-chip-btn" data-prompt="📋 Open Prompt Library">📋 Prompt Library</button>
+        <button class="voice-chip-btn" data-prompt="🧪 Show Interactive Lab Models">🧪 Lab Models</button>
+        <button class="voice-chip-btn" data-prompt="🎯 Start AI Quiz">🎯 AI Quiz</button>
+      </div>
+
+      <!-- Chat Messages Transcript -->
+      <div id="voice-messages-container" class="voice-messages-container">
+        <div class="voice-msg system-msg">
+          <div class="voice-msg-avatar">✨</div>
+          <div class="voice-msg-body">
+            <div class="voice-msg-author">AI Voice Assistant</div>
+            <div class="voice-msg-content">Welcome to <strong>AI Model Hub</strong>! 🎙️ Pick a suggestion chip below, ask about models, RAG, agents, or click ⚙️ for voice settings!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls Bar -->
+      <div class="voice-controls-bar">
+        <button id="mic-toggle-btn" class="mic-toggle-btn" title="Toggle Microphone">🎙️</button>
+        <div class="voice-input-wrapper">
+          <input type="text" id="voice-text-input" placeholder="Ask AI Voice Assistant or pick a chip...">
+          <button id="voice-send-btn" class="voice-send-btn">➔</button>
+        </div>
+        <button id="voice-mute-btn" class="icon-btn-sm" title="Mute/Unmute Audio Voice">🔊</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modular Scripts -->
+  <script src="data/models.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/architectures.js"></script>
+  <script src="data/prompts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
